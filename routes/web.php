@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
+Route::resource('trigonometri', Tb_materiController::class);
 Route::get('/home', 'HomeController@index')->name('home');
 Route::prefix('profile')->name('profile.')->middleware('auth')->group(function () {
     Route::get('/myprofile', 'UserController@myProfile')->name('myprofile');
