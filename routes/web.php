@@ -26,3 +26,7 @@ Route::prefix('profile')->name('profile.')->middleware('auth')->group(function (
     Route::get('/password', 'UserController@changePassword')->name('changepassword');
     Route::patch('/updatepassword', 'UserController@updatePassword')->name('updatepassword');
 });
+
+Route::resource('materi', 'MateriController');
+Route::resource('nilai', 'NilaiController');
+Route::resource('soal', 'SoalController');
